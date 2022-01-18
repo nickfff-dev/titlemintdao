@@ -27,8 +27,37 @@ li{
   display: inline-block;
   padding: 3px;
   font-size: 1.5em;
+  color:white;
 }
+ li .img-fluid{
+   
+   width: 30px;
+   
+   height: auto;
+ }
 
 .header{
   align-items: center;
+  color:white;
 }
+
+.sub{
+  margin: 0;
+  text-align: center;
+}
+
+.poutline{
+  background-color: transparent;
+  border: 0;
+  color: antiquewhite;
+}
+
+
+.mint{
+  text-align: center;
+  margin: 0;
+  color: white;
+}
+
+.suc{text-align: center;
+color:white;}

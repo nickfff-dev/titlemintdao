@@ -1,4 +1,5 @@
 import React from 'react';
+import Opensea from './opensea.svg'
 
 
 
@@ -18,7 +19,7 @@ class Header extends React.Component {
                         <ul>
                             <li><a href='https://www.facebook.com' target='_blank'><i className='fab fa-twitter'></i></a></li>
                             <li><a href='https://www.discord.com' target='_blank'><i className='fab fa-discord'></i></a></li>
-                            <li><a href='https://www.facebook.com' target='_blank'><img src='' className='fab fa-discord'/></a></li>
+                            <li><img src={Opensea} className='img-fluid'/></li>
                         </ul>
                     </div>
                     <div className='col-sm-4 mt-4 title'>

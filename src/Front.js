@@ -25,7 +25,7 @@ class Front extends React.Component {
 
                     </div>
                     <div className='col-sm-4'>
-                    <img />
+                    <img src="https://media.giphy.com/media/ioopmOHLqIDfGxLLKG/giphy.gif" className='img-fluid' />
                     </div>
                     <div className='col-sm-4'>
                         
