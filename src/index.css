@@ -52,83 +52,35 @@ li{
 
 .header{
   align-items: center;
+  text-align: center;
   color: #fd6459;
 }
 
-.sub{
-  margin: 0;
-  text-align: center;
-}
 
 .poutline{
   background-color: transparent;
-  border: 0;
-
-  color:  #fd6459;
-  font-size: 1.5em;
+  color: #fd6459;
+  font-size: 19px;
+  border: 0px;
 }
+  
 
 .fab{
-  color: #fd6459;
-}
-
-.mint{
-  text-align: center;
-  margin: 0;
-  color: #fd6459;
-}
-
-.suc{text-align: center;
-  color: #fd6459;}
-
-
-.title{
-  text-align: center;
-  color: #fd6459;
-  font-size: 2em;
-  
+  color:#fd6459
 }
 
 .wallet{
-  text-align: center;
-  color: #fd6459;
-  font-size: 15px;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  font-size: 19px;
 }
-@media screen and (max-width: 1080px) {
+
+@media screen and (max-width: 630px) {
   .wallet{
     font-size: 10px;
-  }
-}
-  
-
-
-@media screen and (max-width: 768px) {
-  .title{
-    font-size: 5px;
-  }
-  .wallet{
-    font-size: 5px;
   }
   .dot{
-    height: 10px;
-    width: 10px;
+  margin-left: -40px;
   }
-  .social{
-    font-size: 10px;
-  }
-  .contract{
-    margin-left: -25px;
-  }
-}
-
-
-.meja{
- 
-  height: auto;
-  margin-right: 70px;
-}
-.contract{
-  margin-left: 25px;
 }
   
+

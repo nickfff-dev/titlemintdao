@@ -3,10 +3,16 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import Front from './Front';
 import { ethers } from 'ethers';
+import contract from './contracts/contractabi.json'
+
+
 
 
 const contractAd = '0x2737462a68798623f3ef2956a04ed503300c751e'
-const contractABI = contractAd.abi
+const contractABI = contract.abi
+
+
+
 
 function App() {
   const [currentAccount, setCurrentAccount] = useState(null);
@@ -49,20 +55,12 @@ function App() {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
         const contract = new ethers.Contract(contractAd, contractABI, signer);
-        const tx = await contract.mintNFTs(1, {value: ethers.utils.parseEther('0.0')});
+        const tx = await contract.mintNFTs(mintNumber, {value: ethers.utils.parseEther('0.0')});
         console.log(tx)
         alert.log('mining please wait')
         await tx.wait();
         alert.log('minted')
-        return ( <div className="row mt-5 suc">
-        <div className="col-sm-3 mt-5"></div>
-        <div className="col-sm-5 mt-5">
-            <div>Success</div>
-            <div>https://etherscan.io/address/0x2737462a68798623f3ef2956a04ed503300c751e</div>
-            
-        </div>
-        <div className="col-sm-4 mt-5"></div>
-    </div>)
+        return ( afterMint)
 
 
 
@@ -84,16 +82,14 @@ function App() {
 
   const beforeMint = () => {
     return(
-      <div className="row mt-5 sub">
-      <div className='col-sm-3 mt-5'></div>
-      <div className='col-sm-5 mt-5'>
-          <div className='row mt-5'> < button onClick={connectWalletHandler} className='poutline'>CONNECT WALLET</button></div>
-          <div className='row mt-5'>
+      <div className="container tausi ">
+    
+      <div className='row'> < button onClick={connectWalletHandler} className='poutline'>CONNECT WALLET</button></div>
+          <div className='row'>
               <span class='contract'>contract:https://etherscan.io/address/0x2737462a687</span>
           </div>
-      </div>
-      <div className='col-sm-4 mt-5'></div>
-  
+
+     
   </div>
     )
   }
@@ -101,12 +97,16 @@ function App() {
   const walletConnected = () => {
     return(
       <div className='row mint'>
-      <div className='col-sm-3 mt-5'></div>
-      <div className='col-sm-5 mt-5'>
-          <div className='mt-5'> <h1>Mint</h1></div>
-          <div> <input type='number' onChange={handleChange} placeholder='# of NFTs (MAX 20)'/>
-  <button onClick={mintNftHandler}>mint</button>
-  </div>
+      
+      <div className='col'>
+           <h1>Mint</h1>
+            
+           
+            <form onSubmit={mintNftHandler}>
+          <input type='number' onChange={handleChange} placeholder='# of NFTs (MAX 20)' />
+          <button type="submit">mint</button>
+          </form>
+
   
           <div>
               Max supply: 1000
@@ -116,7 +116,7 @@ function App() {
               contract: https://etherscan.io/address/0x2737462a68798623f3ef
           </div>
       </div>
-      <div className='col-sm-3 mt-5'></div>
+      
   </div>
     )
   }
@@ -134,6 +134,11 @@ function App() {
               </div>
     )
   }
+
+  useEffect(() => {
+    checkWalletIsConnected();
+    
+  })
  
   
   
