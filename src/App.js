@@ -22,9 +22,6 @@ function App() {
     if(!ethereum){
       alert('Please install MetaMask')
       return;
-    }else{
-      alert('Connected to MetaMask')
-      
     }
    
 
@@ -37,10 +34,10 @@ function App() {
     }
     try {
       const accounts = await ethereum.request({method: 'eth_requestAccounts'});
-      console.log("found an account", accounts[0]);
+      alert("found an account", accounts[0]);
       setCurrentAccount(accounts[0]);
     } catch (error) {
-      console.log("error", error);
+      alert("error", error);
   }
   }
 
@@ -51,7 +48,7 @@ function App() {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
         const contract = new ethers.Contract(contractAd, contractABI, signer);
-        const tx = await contract.mintNFTs(mintNumber, {value: ethers.utils.parseEther('0.0')});
+        const tx = await contract.mintNFTs(1, {value: ethers.utils.parseEther('0.0')});
         console.log(tx)
         alert.log('mining please wait')
         await tx.wait();
@@ -89,9 +86,9 @@ function App() {
       <div className="row mt-5 sub">
       <div className='col-sm-3 mt-5'></div>
       <div className='col-sm-5 mt-5'>
-          <div className='row mt-5'> < button onClick={connectWalletHandler} className='poutline'>connect wallet</button></div>
+          <div className='row mt-5'> < button onClick={connectWalletHandler} className='poutline'>CONNECT WALLET</button></div>
           <div className='row mt-5'>
-              <span>contract:https://etherscan.io/address/0x2737462a68798623f3ef2956a04ed503300c751e</span>
+              <span>contract:https://etherscan.io/address/0x2737462a687</span>
           </div>
       </div>
       <div className='col-sm-4 mt-5'></div>
@@ -106,7 +103,7 @@ function App() {
       <div className='col-sm-3 mt-5'></div>
       <div className='col-sm-5 mt-5'>
           <div className='mt-5'> <h1>Mint</h1></div>
-          <div> <input type='number' onChange={handleChange} placeholder='number of NFTs'/>
+          <div> <input type='number' onChange={handleChange} placeholder='# of NFTs (MAX 20)'/>
   <button onClick={mintNftHandler}>mint</button>
   </div>
   
@@ -115,7 +112,7 @@ function App() {
           </div>
           <div> price: free</div>
           <div>
-              contract: https://etherscan.io/address/0x2737462a68798623f3ef2956a04ed503300c751e
+              contract: https://etherscan.io/address/0x2737462a68798623f3ef
           </div>
       </div>
       <div className='col-sm-3 mt-5'></div>
@@ -138,7 +135,7 @@ function App() {
   }
   useEffect(() => {
     checkWalletIsConnected();
-  } , [currentAccount])
+  })
   
   
   return (

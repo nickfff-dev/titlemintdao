@@ -22,7 +22,7 @@ render(){
     <div className='col-sm-3 mt-5'></div>
     <div className='col-sm-5 mt-5'>
         <div className='mt-5'> <h1>Mint</h1></div>
-        <div> select quantity(max 20per tx):[1]</div>
+        <div> select quantity(max 20per tx)</div>
         <div>
             Max supply: 1000
         </div>

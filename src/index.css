@@ -17,7 +17,7 @@ html {
 body{
   background-color: black ;
   font-family: "InfraExtraBoldItalic";
- 
+  color: #fd6459;
   text-rendering: optimizeLegibility;
 
   
@@ -36,7 +36,7 @@ li{
   display: inline-block;
   padding: 3px;
   font-size: 1.5em;
-  color:white;
+  color: #fd6459;
 }
  li .img-fluid{
    
@@ -47,7 +47,7 @@ li{
 
 .header{
   align-items: center;
-  color:white;
+  color: #fd6459;
 }
 
 .sub{
@@ -58,15 +58,22 @@ li{
 .poutline{
   background-color: transparent;
   border: 0;
-  color: antiquewhite;
+  color:  #fd6459;
+  font-size: 1.5em;
 }
 
+.fab{
+  color: #fd6459;
+}
 
 .mint{
   text-align: center;
   margin: 0;
-  color: white;
+  color: #fd6459;
 }
 
 .suc{text-align: center;
-color:white;}
+  color: #fd6459;}
+
+
+
