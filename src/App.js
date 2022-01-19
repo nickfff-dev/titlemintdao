@@ -86,7 +86,7 @@ function App() {
     
       <div className='row'> < button onClick={connectWalletHandler} className='poutline'>CONNECT WALLET</button></div>
           <div className='row'>
-              <span class='contract'>contract:https://etherscan.io/address/0x2737462a687</span>
+              <span className='contract'>contract:https://etherscan.io/address/0x2737462a687</span>
           </div>
 
      
