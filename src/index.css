@@ -2,12 +2,21 @@
   box-sizing: border-box;
 }
 
+
+@font-face {
+  font-family: "InfraExtraBoldItalic";
+  src: local("InfraExtraBoldItalic"),
+   url("./font/InfraExtraBoldItalic.otf") format("opentype");
+  
+  }
+
+
 html {
   scroll-behavior: smooth;
 }
 body{
   background-color: black ;
-  font-family: "Baloo 2", sans-serif;
+  font-family: "InfraExtraBoldItalic";
  
   text-rendering: optimizeLegibility;
 

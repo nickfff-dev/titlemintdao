@@ -22,10 +22,10 @@ class Header extends React.Component {
                             <li><img src={Opensea} className='img-fluid'/></li>
                         </ul>
                     </div>
-                    <div className='col-sm-4 mt-4 title'>
+                    <div className='col-sm-3 mt-4 title'>
                         <h1>TitleDAO</h1>
                     </div>
-                    <div className='col-sm-2 mt-4 wallet'>
+                    <div className='col-sm-3 mt-4 wallet'>
                         
                         <h3>connect wallet</h3>
                             
