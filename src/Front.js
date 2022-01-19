@@ -4,9 +4,7 @@ import Header from './Header';
 
 
 class Front extends React.Component {
-    constructor(props){
-        super(props)
-    }
+   
     
     
     
