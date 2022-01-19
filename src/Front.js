@@ -23,7 +23,7 @@ class Front extends React.Component {
 
                     </div>
                     <div className='col-sm-4'>
-                    <img src="https://media.giphy.com/media/ioopmOHLqIDfGxLLKG/giphy.gif" className='img-fluid meja' />
+                    <img src="https://media.giphy.com/media/ioopmOHLqIDfGxLLKG/giphy.gif" alt="meja" className='img-fluid meja' />
                     </div>
                     <div className='col-sm-4'>
                         
