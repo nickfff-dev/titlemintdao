@@ -34,6 +34,7 @@ function App() {
     }
     try {
       const accounts = await ethereum.request({method: 'eth_requestAccounts'});
+      await ethereum.request({method: 'eth_requestAccounts'});
       alert("found an account", accounts[0]);
       setCurrentAccount(accounts[0]);
     } catch (error) {
@@ -88,7 +89,7 @@ function App() {
       <div className='col-sm-5 mt-5'>
           <div className='row mt-5'> < button onClick={connectWalletHandler} className='poutline'>CONNECT WALLET</button></div>
           <div className='row mt-5'>
-              <span>contract:https://etherscan.io/address/0x2737462a687</span>
+              <span class='contract'>contract:https://etherscan.io/address/0x2737462a687</span>
           </div>
       </div>
       <div className='col-sm-4 mt-5'></div>
@@ -133,9 +134,7 @@ function App() {
               </div>
     )
   }
-  useEffect(() => {
-    checkWalletIsConnected();
-  })
+ 
   
   
   return (

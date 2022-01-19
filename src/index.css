@@ -19,11 +19,16 @@ body{
   font-family: "InfraExtraBoldItalic";
   color: #fd6459;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  align-items: center;
 
   
 }
 
 .dot {
+  margin-top:5px;
   height: 25px;
   width: 25px;
   background-color: #bbb;
@@ -35,12 +40,12 @@ li{
   list-style: none;
   display: inline-block;
   padding: 3px;
-  font-size: 1.5em;
+  font-size: 19px;
   color: #fd6459;
 }
  li .img-fluid{
    
-   width: 30px;
+   width: 20px;
    
    height: auto;
  }
@@ -58,6 +63,7 @@ li{
 .poutline{
   background-color: transparent;
   border: 0;
+
   color:  #fd6459;
   font-size: 1.5em;
 }
@@ -76,4 +82,53 @@ li{
   color: #fd6459;}
 
 
+.title{
+  text-align: center;
+  color: #fd6459;
+  font-size: 2em;
+  
+}
 
+.wallet{
+  text-align: center;
+  color: #fd6459;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1080px) {
+  .wallet{
+    font-size: 10px;
+  }
+}
+  
+
+
+@media screen and (max-width: 768px) {
+  .title{
+    font-size: 5px;
+  }
+  .wallet{
+    font-size: 5px;
+  }
+  .dot{
+    height: 10px;
+    width: 10px;
+  }
+  .social{
+    font-size: 10px;
+  }
+  .contract{
+    margin-left: -25px;
+  }
+}
+
+
+.meja{
+ 
+  height: auto;
+  margin-right: 70px;
+}
+.contract{
+  margin-left: 25px;
+}
+  
